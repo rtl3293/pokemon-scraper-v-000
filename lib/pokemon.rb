@@ -24,7 +24,8 @@ class Pokemon
       new_pokemon[header] = value
       #binding.pry
     end
-    pokemon.execute("UPDATE hp FROM pokemon WHERE id = ?" id)
+    hp_update = db.prepare("UPDATE hp FROM pokemon WHERE id = ?")
+    hp_update.execute(id)
     new_pokemon[:db] = @db
     Pokemon.new(new_pokemon).hp =
     #binding.pry
