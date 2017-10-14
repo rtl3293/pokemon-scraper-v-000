@@ -18,6 +18,7 @@ class Pokemon
   def self.find(id, db)
     prep = db.prepare("SELECT * FROM pokemon WHERE id = ?")
     new_pokemon = {}
+    pokemon = prep.execute!(id)
     prep.execute!(id).each_with_index do |value, i|
       new_pokemon[prep.execute(id).columns[i - 1].to_sym] = value
       #binding.pry
