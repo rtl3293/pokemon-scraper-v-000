@@ -7,12 +7,12 @@ class Pokemon
     @name = name
     @type = type
     @db = db
-    @@all < self
+    @@all << self
   end
 
   def self.save
     @@all.each do |instance|
-      
+
     end
   end
 end
