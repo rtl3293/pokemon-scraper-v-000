@@ -43,9 +43,9 @@ describe "Pokemon" do
   describe "BONUS" do
 
     before do
-      @sql_runner.execute_create_hp_column
       Pokemon.save('Pikachu', 'electric', @db)
       Pokemon.save('Magikarp', 'water', @db)
+      @sql_runner.execute_create_hp_column
     end
 
     let(:pikachu){Pokemon.find(1, @db)}
