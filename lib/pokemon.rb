@@ -27,12 +27,12 @@ class Pokemon
     end
     new_pokemon[:db] = @db
     Pokemon.new(new_pokemon)
+    binding.pry
   end
 
   def alter_hp(new_hp, db)
     prep = db.prepare("UPDATE pokemon SET hp = ? WHERE id = ?")
     prep.execute(new_hp, @id)
-    binding.pry
   end
 
 end
