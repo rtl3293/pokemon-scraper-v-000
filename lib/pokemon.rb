@@ -12,7 +12,5 @@ class Pokemon
   def self.save(name, type, db)
     @@total += 1
     Self.new(@@total, name, type, db)
-
-    end
   end
 end
