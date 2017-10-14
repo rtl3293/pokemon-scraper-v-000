@@ -17,7 +17,9 @@ class Pokemon
 
   def self.find(id, db)
     prep = db.prepare("SELECT * FROM pokemon WHERE id = ?")
-    new_pokemon = prep.execute(id)
+    new_pokemon = {}
+    prep.execute(id).columns.each do |column|
+    
     binding.pry
   end
 end
