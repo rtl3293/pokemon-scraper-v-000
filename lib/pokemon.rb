@@ -27,7 +27,7 @@ class Pokemon
     end
     new_pokemon[:db] = db
     pikachu = Pokemon.new(new_pokemon)
-    binding.pry
+    #binding.pry
     pikachu
   end
 
