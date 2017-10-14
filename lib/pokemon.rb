@@ -20,7 +20,7 @@ class Pokemon
     new_pokemon = {}
     pokemon = prep.execute!(id)
     binding.pry
-    prep.execute!(id)[0].each_with_index do |value, i|
+    prep.execute!(id).flatten.each_with_index do |value, i|
       header = prep.execute(id).columns[i].to_sym
       new_pokemon[header] = value
       #binding.pry
