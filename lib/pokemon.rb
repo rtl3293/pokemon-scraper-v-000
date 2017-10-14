@@ -24,7 +24,8 @@ class Pokemon
       new_pokemon[header] = value
       #binding.pry
     end
-    pikachu = Pokemon.new(new_pokemon)
+    new_pokemon[:db] = @db
+    Pokemon.new(new_pokemon)
     #binding.pry
   end
 
