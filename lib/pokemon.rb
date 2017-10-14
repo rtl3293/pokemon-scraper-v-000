@@ -1,8 +1,8 @@
 class Pokemon
-  attr_accessor :id, :name, :type, :db
+  attr_accessor :id, :name, :type, :db, :hp
   @@total = 0
 
-  def initialize(id:, name:, type:, db:)
+  def initialize(id:, name:, type:, db:, hp: = 0)
     @id = id
     @name = name
     @type = type
@@ -28,5 +28,7 @@ class Pokemon
     Pokemon.new(new_pokemon)
     #binding.pry
   end
+
+  def bonus
 
 end
