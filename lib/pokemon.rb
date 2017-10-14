@@ -27,7 +27,8 @@ class Pokemon
     end
     new_pokemon[:db] = db
     pikachu = Pokemon.new(new_pokemon)
-
+    binding.pry
+    pikachu
   end
 
   def alter_hp(new_hp, db)
