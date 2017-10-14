@@ -20,7 +20,7 @@ class Pokemon
     prep = db.prepare("SELECT * FROM pokemon WHERE id = ?")
     new_pokemon = {}
     pokemon = prep.execute!(id)
-    binding.pry
+    #binding.pry
     prep.execute!(id).flatten.each_with_index do |value, i|
       header = prep.execute(id).columns[i].to_sym
       new_pokemon[header] = value
