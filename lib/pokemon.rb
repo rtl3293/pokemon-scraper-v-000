@@ -19,7 +19,7 @@ class Pokemon
     prep = db.prepare("SELECT * FROM pokemon WHERE id = ?")
     new_pokemon = {}
     prep.execute!(id).each_with_index do |value, i|
-      new_pokemon[prep.execute!(id)[i - 1].to_sym] = value
+      new_pokemon[prep.execute(id)[i - 1].to_sym] = value
       binding.pry
     end
     binding.pry
