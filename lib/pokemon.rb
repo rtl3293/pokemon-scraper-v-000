@@ -29,6 +29,4 @@ class Pokemon
     #binding.pry
   end
 
-  def bonus
-
 end
