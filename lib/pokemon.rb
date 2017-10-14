@@ -20,7 +20,7 @@ class Pokemon
     new_pokemon = {}
     prep.execute!(id).each_with_index do |value, i|
       new_pokemon[prep.execute(id)[i - 1].to_sym] = value
-      binding.pry
+      #binding.pry
     end
     binding.pry
   end
