@@ -7,6 +7,7 @@ class Pokemon
     @name = name
     @type = type
     @db = db
+    @hp = hp
   end
 
   def self.save(name, type, db)
@@ -23,7 +24,6 @@ class Pokemon
     prep.execute!(id).flatten.each_with_index do |value, i|
       header = prep.execute(id).columns[i].to_sym
       new_pokemon[header] = value
-      #binding.pry
     end
     new_pokemon[:db] = db
     pikachu = Pokemon.new(new_pokemon)
