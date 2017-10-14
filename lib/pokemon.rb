@@ -16,6 +16,7 @@ class Pokemon
   end
 
   def self.find(id, db)
+    @sql_runner.execute_create_hp_column
     db.execute("UPDATE pokemon SET hp = 60;")
     prep = db.prepare("SELECT * FROM pokemon WHERE id = ?")
     new_pokemon = {}
