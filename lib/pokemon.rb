@@ -1,7 +1,7 @@
 class Pokemon
   attr_accessor :id, :name, :type, :db
   @@all = []
-  
+
   def initialize(id:, name:, type:, db:)
     @id = id
     @name = name
@@ -10,5 +10,9 @@ class Pokemon
     @@all < self
   end
 
-  def
+  def self.save
+    @@all.each do |instance|
+      
+    end
+  end
 end
