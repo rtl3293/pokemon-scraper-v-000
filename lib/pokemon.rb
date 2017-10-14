@@ -14,4 +14,8 @@ class Pokemon
     prep = db.prepare("INSERT INTO pokemon (name, type) VALUES (?, ?)")
     prep.execute(name, type)
   end
+
+  def self.find(id, db)
+    new_pokemon = db.prepare("SELECT *")
+  end
 end
