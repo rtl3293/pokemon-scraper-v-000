@@ -22,7 +22,7 @@ class Pokemon
     prep.execute!(id).each_with_index do |value, i|
       header = prep.execute(id).columns[i].to_sym
       new_pokemon[header] = value
-      #binding.pry
+      binding.pry
     end
     binding.pry
   end
