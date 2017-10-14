@@ -25,7 +25,7 @@ class Pokemon
       #binding.pry
     end
     new_pokemon[:db] = @db
-    Pokemon.new(new_pokemon).hp = 60
+    Pokemon.new(new_pokemon).hp =
     #binding.pry
   end
 
