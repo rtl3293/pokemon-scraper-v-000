@@ -1,2 +1,2 @@
-ALTER TABLE pokemon 
+ALTER TABLE pokemon
 ADD hp INTEGER
