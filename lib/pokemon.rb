@@ -26,8 +26,8 @@ class Pokemon
       #binding.pry
     end
     new_pokemon[:db] = @db
+    binding.pry
     Pokemon.new(new_pokemon)
-    #binding.pry
   end
 
 end
