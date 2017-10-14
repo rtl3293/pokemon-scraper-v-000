@@ -17,7 +17,7 @@ class Pokemon
 
   def self.find(id, db)
     # db.execute("UPDATE pokemon SET hp = 60;")
-    # prep = db.prepare("SELECT * FROM pokemon WHERE id = ?")
+    prep = db.prepare("SELECT * FROM pokemon WHERE id = ?")
     new_pokemon = {}
     pokemon = prep.execute!(id)
     binding.pry
